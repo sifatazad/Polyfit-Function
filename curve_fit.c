@@ -218,7 +218,7 @@ static void polyfit(FILE *fp,double *soln,int n,int fit_rank) {
         matrix[i][fit_rank+1]=sum_y_x_pow(x,y,n,i);
     }
 
-    FILE *fo=fopen("C:/Users/Rifat/OneDrive/Documents/polyfit/output.txt","w");
+    FILE *fo=fopen("output.txt","w");
     if (!fo) {
         for (int i=0; i<=fit_rank; i++) {
             free(matrix[i]);
@@ -298,7 +298,7 @@ static void polyfit_without_file(const double *x, const double *y, double *soln,
 }
 
 int main() {
-    FILE *fp=fopen("C:/Users/Rifat/OneDrive/Documents/polyfit/input.txt","r");
+    FILE *fp=fopen("input.txt","r");
     if (!fp) {
         return 1;
     }
